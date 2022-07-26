@@ -1,0 +1,15 @@
+.banner__text {
+    color: var(--bg-color);
+    text-align: left;
+    line-height: 2rem;
+}
+
+.banner__title {
+    font-weight: 700;
+    font-size: var(--title-size);
+}
+
+.banner__subtitle {
+    font-weight: 600;
+    font-size: 0.875rem;
+}

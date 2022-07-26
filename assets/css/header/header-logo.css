@@ -1,0 +1,14 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__title {
+    font-weight: 700;
+    font-size: var(--title-size);
+    color: var(--txt-color);
+}
+
+.logo__title--blue {
+    color: var(--main-color);
+}

@@ -1,0 +1,8 @@
+.banner {
+    margin: 1rem 0;
+    background: url(../images/banner-image.png) no-repeat center / cover;
+    width: 100vw;
+    height: 35vh;
+    max-height: 352px;
+    position: relative;
+}

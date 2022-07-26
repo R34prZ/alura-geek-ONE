@@ -1,0 +1,26 @@
+.header__search {
+    display: flex;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+.header__search__input {
+    display: none;
+}
+
+.header__search::after {
+    content: "";
+    position: absolute;
+    background: url("../../images/search.svg") no-repeat center;
+    height: 100%;
+    width: 2rem;
+    top: 0;
+    right: 0;
+    transition: transform .35s ease-out;
+}
+
+.header__search:hover::after  {
+    transform: scale(1.1);
+}
+
