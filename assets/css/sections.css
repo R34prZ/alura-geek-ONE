@@ -1,8 +1,7 @@
-.consoles-sect {
-    margin-top: 1rem;
+.star-wars-sect, .consoles-sect, .diversos-sect, .produtos-sect {
+    padding-top: 1rem;
 }
 
-.diversos-sect {
-    margin-top: 1rem;
+.diversos-sect, .produtos-sect {
     padding-bottom: 4rem;
 }

@@ -1,0 +1,12 @@
+.produtos__sect-header {
+    line-height: 3rem;
+}
+
+.btn--adc-produto {
+    display: block;
+    width: 152px;
+    height: 42px;
+    padding: 0;
+    font-size: var(--subtitle-size);
+}
+

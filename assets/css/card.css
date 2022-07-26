@@ -58,10 +58,18 @@
     display: none;
 }
 
+.card--produto:last-child, .card--produto:nth-last-child(2) {
+    display: block;
+}
+
 /* tablets */
 @media screen and (min-width: 768px) {
     .card {
         width: calc((25% - 1rem));
+    }
+
+    .card--produto:last-child {
+        margin: 0 auto 0 0;
     }
 }
 
