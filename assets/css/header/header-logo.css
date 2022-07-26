@@ -12,3 +12,14 @@
 .logo__title--blue {
     color: var(--main-color);
 }
+
+/* computers */
+@media screen and (min-width: 1024px) {
+    .logo__img {
+        height: 2rem;
+    }
+
+    .logo__title {
+        font-size: 2rem;
+    }
+}

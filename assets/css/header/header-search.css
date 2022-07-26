@@ -1,5 +1,8 @@
+
+
 .header__search {
     display: flex;
+    flex-direction: row-reverse;
     position: relative;
     width: 2rem;
     height: 2rem;
@@ -7,6 +10,14 @@
 
 .header__search__input {
     display: none;
+    border-radius: 1rem;
+    border: none;
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 0 1rem;
+    font-weight: 400;
+    font-size: var(--subtitle-size);
+    color: var(--txt-color);
 }
 
 .header__search::after {
@@ -22,5 +33,27 @@
 
 .header__search:hover::after  {
     transform: scale(1.1);
+}
+
+/* tablets */
+@media screen and (min-width: 768px) {
+    .login-btn {
+        order: 2;
+    }
+
+    .header__search {
+        width: 272px;
+    }
+
+    .header__search__input {
+        display: inline-block;
+    }
+}
+
+/* computers */
+@media screen and (min-width: 1024px) {
+    .header__search {
+        width: 400px;
+    }
 }
 

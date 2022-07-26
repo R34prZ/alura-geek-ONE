@@ -3,3 +3,10 @@
     left: 1rem;
     bottom: 1rem;
 }
+
+/* computers */
+@media screen and (min-width: 1024px) {
+    .banner__container {
+        margin-left: 8rem;
+    }
+}

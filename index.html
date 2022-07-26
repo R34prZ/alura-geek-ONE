@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./assets/css/header/header-logo.css">
     <link rel="stylesheet" href="./assets/css/button.css">
     <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/header/login-btn.css">
     <link rel="stylesheet" href="./assets/css/header/header-search.css">
     <link rel="stylesheet" href="./assets/css/banner.css">
     <link rel="stylesheet" href="./assets/css/banner/banner-text.css">
@@ -31,8 +30,9 @@
         </div>
 
         <button class="login-btn btn">Login</button>
+        
         <div class="header__search">
-            <input class="header__search__input" type="text">
+            <input class="header__search__input" type="text" placeholder="O que deseja encontrar?">
         </div>
 
     </header>
@@ -258,38 +258,44 @@
 
     <footer class="footer">
 
-        <div class="logo--footer logo">
-            <img src="./assets/images/logo.svg" alt="Logo da Alura Geek" class="logo__img">
-            <h1 class="logo__title"><span class="logo__title--blue">Alura</span>Geek</h1>
-        </div>
+        <div class="wrapper">
 
-        <div class="footer__about">
-            <a href="#" class="about__text">Quem somos nós</a>
-            <a href="#" class="about__text">Política de privacidade</a>
-            <a href="#" class="about__text">Programa fidelidade</a>
-            <a href="#" class="about__text">Nossas lojas</a>
-            <a href="#" class="about__text">Quero ser franqueado</a>
-            <a href="#" class="about__text">Anuncie aqui</a>
-        </div>
-
-        <form action="" class="call-us">
-
-            <legend class="call-us__title">Fale conosco</legend>
-            
-            <div class="input-box">
-                <input type="text" id="nome" class="call-us__input">
-                <label class="form__label" for="nome">Nome</label>
+            <div class="footer__info-box">
+                <section class="logo--footer logo">
+                    <img src="./assets/images/logo.svg" alt="Logo da Alura Geek" class="logo__img">
+                    <h1 class="logo__title"><span class="logo__title--blue">Alura</span>Geek</h1>
+                </section>
+        
+                <section class="footer__about">
+                    <a href="#" class="about__text">Quem somos nós</a>
+                    <a href="#" class="about__text">Política de privacidade</a>
+                    <a href="#" class="about__text">Programa fidelidade</a>
+                    <a href="#" class="about__text">Nossas lojas</a>
+                    <a href="#" class="about__text">Quero ser franqueado</a>
+                    <a href="#" class="about__text">Anuncie aqui</a>
+                </section>
             </div>
+    
+            <form action="" class="call-us">
+    
+                <legend class="call-us__title">Fale conosco</legend>
+                
+                <div class="input-box">
+                    <input type="text" id="nome" class="call-us__input">
+                    <label class="form__label" for="nome">Nome</label>
+                </div>
+    
+            <textarea id="mensagem" class="call-us__text-area" placeholder="Escreva sua mensagem"></textarea>
+    
+            <input class="btn--post btn--blue btn" type="post" value="Enviar mensagem">
+    
+            </form>
 
-        <textarea id="mensagem" class="call-us__tex-area" placeholder="Escreva sua mensagem"></textarea>
-
-        <input class="btn--post btn--blue btn" type="post" value="Enviar mensagem">
-
-        </form>
+        </div>
 
         <div class="developer">
             <p class="developer__text">Desenvolvido por Gabriel RQ</p>
-            <p class="developer__text">2021</p>
+            <p class="developer__text">2022</p>
         </div>
 
     </footer>

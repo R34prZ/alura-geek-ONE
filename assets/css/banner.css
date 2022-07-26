@@ -2,7 +2,15 @@
     margin: 1rem 0;
     background: url(../images/banner-image.png) no-repeat center / cover;
     width: 100vw;
-    height: 35vh;
+    height: 40vh;
     max-height: 352px;
     position: relative;
+}
+
+
+/* computers */
+@media screen and (min-width: 1024px) {
+    .banner {
+        height: 352px;
+    }
 }
