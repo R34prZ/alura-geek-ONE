@@ -50,10 +50,10 @@ body {
 
 /* tablets */
 @media screen and (min-width: 768px) {
-
+    .container {padding: 0 2rem;}
 }
 
 /* computers */
 @media screen and (min-width: 1024px) {
-
+    .container {padding: 0 8rem;}
 }
