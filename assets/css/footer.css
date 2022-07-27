@@ -54,15 +54,13 @@
     position: relative;
 }
 
-/* .form__label {
-    position: absolute;
-    font-weight: 400;
-    font-size: .75rem;
-    top: 50%;
-    left: 1rem;
-    transform: translateY(-50%);
-    color: var(--txt-color);
-} */
+.footer .inp:focus ~ .inp-label {
+    top: .5rem;
+}
+
+.footer .inp:not(:placeholder-shown) ~ .inp-label {
+    top: .5rem;
+}
 
 .btn--post {
     width: 150px;
@@ -107,5 +105,13 @@
     }
 
     .footer__about {margin-right: 1rem;}
+
+    .footer .inp:focus ~ .inp-label {
+        top: 1rem;
+    }
+    
+    .footer .inp:not(:placeholder-shown) ~ .inp-label {
+        top: 1rem;
+    }
 
 }

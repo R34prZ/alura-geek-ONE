@@ -14,6 +14,7 @@
     height: 252px;
     transition: transform .4s ease-in-out, box-shadow .5s ease-out;
     border-radius: 8px;
+    padding-bottom: .75rem;
 }
 
 .card:hover {
