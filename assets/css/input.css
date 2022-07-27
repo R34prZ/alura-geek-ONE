@@ -10,6 +10,22 @@
     font-weight: 400;
 }
 
+.inp:not(:placeholder-shown) ~ .inp-label, .inp:focus ~ .inp-label {
+    top: 1rem;
+    left: 1rem;
+}
+
+.inp-label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a2a2a2;
+    font-weight: 400;
+    font-size: var(--subtitle-size);
+}
+
+
 .textarea {
     resize: none;
     width: 100%;

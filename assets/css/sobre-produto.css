@@ -1,0 +1,53 @@
+.sobre-sect {
+    background-color: #e5e5e5;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--txt-color);
+}
+
+.sobre__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sobre__img {
+    width: 100%;
+}
+
+.sobre__title {
+    font-weight: 500;
+    font-size: var(--title-size);
+    margin: 1rem 0;
+}
+
+.sobre__title--stronger {
+    font-weight: 700;
+}
+
+.sobre__price {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sobre__about::selection {
+    background-color: var(--main-color);
+    color: #e5e5e5;
+}
+
+@media screen and (min-width: 768px) {
+    .sobre__info {
+        flex-direction: row;
+        margin-bottom: 4rem;
+    }
+
+    .sobre__img {
+        width: 250%;
+        margin-right: 1rem;
+    }
+}

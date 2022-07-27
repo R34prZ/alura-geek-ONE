@@ -54,7 +54,7 @@
     position: relative;
 }
 
-.form__label {
+/* .form__label {
     position: absolute;
     font-weight: 400;
     font-size: .75rem;
@@ -62,19 +62,7 @@
     left: 1rem;
     transform: translateY(-50%);
     color: var(--txt-color);
-}
-
-.call-us__input:focus ~ .form__label {
-    top: .5rem;
-}
-
-/* .call-us__text-area {
-
 } */
-
-.call-us__text-area:focus {
-    border-color: var(--main-color);
-}
 
 .btn--post {
     width: 150px;

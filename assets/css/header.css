@@ -4,6 +4,7 @@
     padding-top: 1.375rem;
     padding-bottom: 1rem;
     justify-content: space-between;
+    background-color: #fff;
 }
 
 @media screen and (min-width: 1024px) {

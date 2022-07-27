@@ -36,6 +36,7 @@
     width: 100%;
 }
 
+
 .add__form__image-selector {
     display: none;
 }
@@ -53,20 +54,6 @@
 .image-selector-icon:hover {
     cursor: pointer;
     box-shadow: #1c1c1c20 0 0 1rem .25rem;
-}
-
-.add__input__label {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #a2a2a2;
-    font-weight: 400;
-    font-size: var(--subtitle-size);
-}
-
-.add__input:focus ~ .add__input__label {
-    top: 1rem;
 }
 
 .btn--add {
