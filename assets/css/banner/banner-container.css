@@ -4,9 +4,18 @@
     bottom: 1rem;
 }
 
+.btn--banner {
+    display: block;
+    width: 150px;
+}
+
 /* computers */
 @media screen and (min-width: 1024px) {
     .banner__container {
         margin-left: 8rem;
+    }
+
+    .btn--banner {
+        width: 252px;
     }
 }

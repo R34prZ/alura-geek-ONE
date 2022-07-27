@@ -1,0 +1,28 @@
+.inp {
+    width: 100%;
+    height: 56px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 1rem;
+    border-bottom: 3px solid #46464650;
+    color: var(--txt-color);
+    font-weight: 400;
+}
+
+.textarea {
+    resize: none;
+    width: 100%;
+    height: 82px;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 400;
+    color: var(--txt-color);
+    border-bottom: 3px solid #46464650;
+}
+
+.inp:focus, .textarea:focus {
+    border-color: var(--main-color);
+}

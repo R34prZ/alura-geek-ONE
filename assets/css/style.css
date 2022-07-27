@@ -21,6 +21,10 @@ a{
     color: var(--link-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;

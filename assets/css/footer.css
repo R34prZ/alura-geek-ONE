@@ -68,32 +68,9 @@
     top: .5rem;
 }
 
-.call-us__input {
-    width: 100%;
-    height: 56px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 0 1rem;
-    border-bottom: 3px solid #46464650;
-}
+/* .call-us__text-area {
 
-.call-us__input:focus {
-    border-color: var(--main-color);
-}
-
-.call-us__text-area {
-    resize: none;
-    width: 100%;
-    height: 82px;
-    padding: 1rem;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-weight: 400;
-    color: var(--txt-color);
-    border-bottom: 3px solid #46464650;
-}
+} */
 
 .call-us__text-area:focus {
     border-color: var(--main-color);

@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./assets/css/header/header-search.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/input.css">
-    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/add-produto.css">
 
-    <title>Alura Geek | Login</title>
+    <title>Alura Geek | Adicionar Produto</title>
 </head>
 
 <body>
@@ -34,14 +34,36 @@
 
     <main>
 
-        <section class="login-sect container">
+        <section class="add-produto-sect container">
 
-            <form action="" class="login-form">
-                <legend class="login__title">Iniciar Sessão</legend>
+            <form action="" class="add__form">
+                <legend class="add__title">Adicionar novo produto</legend>
+                
+                <div class="add__input-box">
+                    <input id="url" type="url" class="add__url-input add__input inp" placeholder=" " required>
+                    <input id="image-selector" type="file" accept="image/*" class="add__form__image-selector">
+                    <label class="image-selector-icon" for="image-selector"></label>
+                    <label class="add__input__label" for="url">URL da imagem</label>
+                </div>
 
-                <input type="email" class="login__input inp" placeholder="Escreva seu email" required>
-                <input type="password" class="login__input inp" placeholder="Escreva sua senha" required>
-                <input class="btn--login btn--blue btn" type="submit" value="Entrar">
+                <div class="add__input-box">
+                    <input id="categoria" type="text" class="add__input inp" required>
+                    <label class="add__input__label" for="categoria">Categoria</label> 
+                </div>
+             
+                <div class="add__input-box">
+                    <input id="nome-produto" type="text" class="add__input inp" required>
+                    <label class="add__input__label" for="nome-produto">Nome do produto</label>
+                </div>
+
+                <div class="add__input-box">
+                    <input id="preco-produto" type="text" class="add__input inp" required>
+                    <label class="add__input__label" for="preco-produto">Preço do produto</label>
+                </div>
+
+                <textarea class="add__form__textarea textarea" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
+
+                <input class="btn--add btn--blue btn" type="submit" value="Entrar">
             </form>
 
         </section>
@@ -93,5 +115,7 @@
     </footer>
 
 </body>
+
+<script src="./assets/js/getImagePath.js"></script>
 
 </html>
