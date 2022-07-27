@@ -21,6 +21,7 @@ a{
 
 html {
     scroll-behavior: smooth;
+    width: 100vw;
 }
 
 
