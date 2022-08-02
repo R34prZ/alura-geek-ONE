@@ -1,5 +1,8 @@
-.produtos__sect-header {
+.produtos-sect__header {
     line-height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .btn--adc-produto {
@@ -8,5 +11,13 @@
     height: 42px;
     padding: 0;
     font-size: var(--subtitle-size);
+    box-sizing: content-box;
+}
+
+@media screen and (max-width: 768px) {
+    .produtos-sect__header {
+        flex-direction: column;
+    }
+    
 }
 

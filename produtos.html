@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/input.css">
     <link rel="stylesheet" href="./assets/css/produtos.css">
+    <script src="./assets/js/index.js" type="module" defer></script>
     <title>Alura Geek | Produtos</title>
 </head>
 
@@ -38,7 +39,7 @@
 
         <section class="produtos-sect container">
 
-            <div class="produtos__sect-header">
+            <div class="produtos-sect__header">
                 <h2 class="sect__title">Todos os produtos</h2>
                 <a href="./add_produto.html" class="btn--adc-produto btn--blue btn">Adicionar produto</a>
             </div>
@@ -238,13 +239,17 @@
                 <legend class="call-us__title">Fale conosco</legend>
 
                 <div class="input-box">
-                    <input type="text" id="nome" class="call-us__input inp" placeholder=" " required>
+                    <input type="text" id="nome" class="call-us__input inp" data-input="nome" maxlength="40"
+                        placeholder=" " required>
                     <label class="inp-label" for="nome">Nome</label>
+                    <span class="form__error-msg" data-error="nome"></span>
                 </div>
 
-                <textarea id="mensagem" class="call-us__text-area textarea" placeholder="Escreva sua mensagem"></textarea>
+                <textarea id="mensagem" class="call-us__text-area textarea" maxlength="120"
+                    placeholder="Escreva sua mensagem"></textarea>
 
-                <input class="btn--post btn--blue btn" type="submit" value="Enviar mensagem">
+                <input class="btn--post btn--blue btn" data-input="send-message" type="submit" value="Enviar mensagem"
+                    disabled>
 
             </form>
 

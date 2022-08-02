@@ -52,6 +52,11 @@
 
 .input-box {
     position: relative;
+    text-align: center;
+}
+
+.call-us__input--invalid {
+    border-color: rgb(231, 71, 71);
 }
 
 .footer .inp:focus ~ .inp-label {
@@ -60,6 +65,12 @@
 
 .footer .inp:not(:placeholder-shown) ~ .inp-label {
     top: .5rem;
+}
+
+.form__error-msg {
+    position: relative;
+    top: .5rem;
+    color: rgb(231, 71, 71);
 }
 
 .btn--post {

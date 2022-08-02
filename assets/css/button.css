@@ -9,7 +9,11 @@
     text-align: center;
 }
 
-.btn:hover {
+.btn:disabled {
+    opacity: .5;
+}
+
+.btn:not(:disabled):hover {
     transform: scale(1.05);
     cursor: pointer;
 }

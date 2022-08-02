@@ -1,0 +1,1 @@
+import { validateName } from "./validateContact.js";

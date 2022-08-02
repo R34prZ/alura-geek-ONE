@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/input.css">
     <link rel="stylesheet" href="./assets/css/add-produto.css">
-
+    <script src="./assets/js/index.js" type="module" defer></script>
     <title>Alura Geek | Adicionar Produto</title>
 </head>
 
@@ -38,7 +38,7 @@
 
             <form action="" class="add__form">
                 <legend class="add__title">Adicionar novo produto</legend>
-                
+
                 <div class="add__input-box">
                     <input id="url" type="url" class="add__url-input add__input inp" placeholder=" " required>
                     <input id="image-selector" type="file" accept="image/*" class="add__form__image-selector">
@@ -48,9 +48,9 @@
 
                 <div class="add__input-box">
                     <input id="categoria" type="text" class="add__input inp" placeholder=" " required>
-                    <label class="add__input__label inp-label" for="categoria">Categoria</label> 
+                    <label class="add__input__label inp-label" for="categoria">Categoria</label>
                 </div>
-             
+
                 <div class="add__input-box">
                     <input id="nome-produto" type="text" class="add__input inp" placeholder=" " required>
                     <label class="add__input__label inp-label" for="nome-produto">Nome do produto</label>
@@ -61,7 +61,8 @@
                     <label class="add__input__label inp-label" for="preco-produto">Preço do produto</label>
                 </div>
 
-                <textarea class="add__form__textarea textarea" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
+                <textarea class="add__form__textarea textarea" cols="30" rows="10"
+                    placeholder="Descrição do produto"></textarea>
 
                 <input class="btn--add btn--blue btn" type="submit" value="Adicionar">
             </form>
@@ -95,13 +96,17 @@
                 <legend class="call-us__title">Fale conosco</legend>
 
                 <div class="input-box">
-                    <input type="text" id="nome" class="call-us__input inp" placeholder=" " required>
+                    <input type="text" id="nome" class="call-us__input inp" data-input="nome" maxlength="40"
+                        placeholder=" " required>
                     <label class="inp-label" for="nome">Nome</label>
+                    <span class="form__error-msg" data-error="nome"></span>
                 </div>
 
-                <textarea id="mensagem" class="call-us__text-area textarea" placeholder="Escreva sua mensagem"></textarea>
+                <textarea id="mensagem" class="call-us__text-area textarea" maxlength="120"
+                    placeholder="Escreva sua mensagem"></textarea>
 
-                <input class="btn--post btn--blue btn" type="submit" value="Enviar mensagem">
+                <input class="btn--post btn--blue btn" data-input="send-message" type="submit" value="Enviar mensagem"
+                    disabled>
 
             </form>
 
