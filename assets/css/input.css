@@ -15,6 +15,14 @@
     left: 1rem;
 }
 
+.inp--invalid {
+    border-color: rgb(231, 71, 71);
+}
+
+.form__error-msg {
+    color: rgb(231, 71, 71);
+}
+
 .inp-label {
     position: absolute;
     left: 1rem;

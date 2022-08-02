@@ -39,9 +39,12 @@
             <form action="" class="login-form">
                 <legend class="login__title">Iniciar Sessão</legend>
 
-                <input type="email" class="login__input inp" placeholder="Escreva seu email" required>
-                <input type="password" class="login__input inp" placeholder="Escreva sua senha" required>
+                <input type="email" pattern="^[a-zA-Z.]+@[a-zA-Z.]+.[a-zA-Z]$" class="login__input inp" data-input="login-email" placeholder="Escreva seu email" required>
+                <span class="form__error-msg" data-error="login-email"></span>
+                <input type="password" class="login__input inp" value="admin" placeholder="Escreva sua senha" data-input="login-password" required>
+                <span class="form__error-msg" data-error="login-password"></span>
                 <input class="btn--login btn--blue btn" type="submit" value="Entrar">
+                <span class="form__error-msg" data-error="login"></span>
             </form>
 
         </section>

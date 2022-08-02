@@ -26,6 +26,12 @@
 .add__input-box {
     width: 100%;
     position: relative;
+    text-align: center;
+}
+
+.add__input-box .form__error-msg {
+    position: relative;
+    top: .5rem;
 }
 
 .add__input {

@@ -1,1 +1,1 @@
-import { validateName } from "./validateContact.js";
+import "./validation.js";
