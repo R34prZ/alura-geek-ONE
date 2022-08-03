@@ -33,9 +33,10 @@
         </a>
 
         <a href="./login.html" class="login-btn btn">Login</a>
-        
+
         <div class="header__search">
             <input class="header__search__input" type="text" placeholder="O que deseja encontrar?">
+            <button class="header__search__button"></button>
         </div>
 
     </header>
@@ -268,7 +269,7 @@
                     <img src="./assets/images/logo.svg" alt="Logo da Alura Geek" class="logo__img">
                     <h1 class="logo__title"><span class="logo__title--blue">Alura</span>Geek</h1>
                 </section>
-        
+
                 <section class="footer__about">
                     <a href="#" class="about__text">Quem somos nós</a>
                     <a href="#" class="about__text">Política de privacidade</a>
@@ -278,21 +279,24 @@
                     <a href="#" class="about__text">Anuncie aqui</a>
                 </section>
             </div>
-    
+
             <form action="" class="call-us">
-    
+
                 <legend class="call-us__title">Fale conosco</legend>
-                
+
                 <div class="input-box">
-                    <input type="text" id="nome" class="call-us__input inp" data-input="nome" maxlength="40" placeholder=" " required>
+                    <input type="text" id="nome" class="call-us__input inp" data-input="nome" maxlength="40"
+                        placeholder=" " required>
                     <label class="inp-label" for="nome">Nome</label>
                     <span class="form__error-msg" data-error="nome"></span>
                 </div>
-    
-            <textarea id="mensagem" class="call-us__text-area textarea" maxlength="120" placeholder="Escreva sua mensagem"></textarea>
-    
-            <input class="btn--post btn--blue btn" data-input="send-message" type="submit" value="Enviar mensagem" disabled>
-    
+
+                <textarea id="mensagem" class="call-us__text-area textarea" maxlength="120"
+                    placeholder="Escreva sua mensagem"></textarea>
+
+                <input class="btn--post btn--blue btn" data-input="send-message" type="submit" value="Enviar mensagem"
+                    disabled>
+
             </form>
 
         </div>
