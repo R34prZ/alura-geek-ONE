@@ -10,6 +10,10 @@ const errorMessages = {
     "login-password": {
         valueMissing: "A senha não deve ficar vazia!"
     },
+    "add-image": {
+        valueMissing: "O campo de imagem não deve ficar vazio!",
+        typeMismatch: "Informe uma URL válida!"
+    },
     "add-category": {
         valueMissing: "A categoria do produto não deve ficar vazia!"
     },
@@ -17,7 +21,8 @@ const errorMessages = {
         valueMissing: "O nome do produto não deve ficar vazio!"
     },
     "add-price": {
-        valueMissing: "O preço do produto não deve ficar vazio!"
+        valueMissing: "O preço do produto não deve ficar vazio!",
+        badInput: "Utilize apenas números para o preço!"
     },
     "fallback": {
         "custom": "Houve um problema."
@@ -26,7 +31,9 @@ const errorMessages = {
 
 const errors = [
     "valueMissing",
-    "patternMismatch"
+    "patternMismatch",
+    "typeMismatch",
+    "badInput"
 ]
 
 export const validateInput = (element) => {

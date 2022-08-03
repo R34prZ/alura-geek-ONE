@@ -43,25 +43,6 @@
 }
 
 
-.add__form__image-selector {
-    display: none;
-}
-
-.image-selector-icon {
-    position: absolute;
-    background: url("../images/image-add.svg") no-repeat center / contain;
-    padding: 1.5rem;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    border-radius: 5px;
-}
-
-.image-selector-icon:hover {
-    cursor: pointer;
-    box-shadow: #1c1c1c20 0 0 1rem .25rem;
-}
-
 .btn--add {
     width: 100%;
     padding: 1rem 1rem;

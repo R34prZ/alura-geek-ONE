@@ -20,6 +20,7 @@
 }
 
 .form__error-msg {
+    text-align: center;
     color: rgb(231, 71, 71);
 }
 

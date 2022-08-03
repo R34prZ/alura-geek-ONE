@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/header/header-logo.css">
     <link rel="stylesheet" href="./assets/css/button.css">
@@ -40,26 +41,25 @@
                 <legend class="add__title">Adicionar novo produto</legend>
 
                 <div class="add__input-box">
-                    <input id="url" type="url" class="add__url-input add__input inp" placeholder=" " required>
-                    <input id="image-selector" type="file" accept="image/*" class="add__form__image-selector">
-                    <label class="image-selector-icon" for="image-selector"></label>
+                    <input id="url" type="url" class="add__url-input add__input inp" data-input="add-image" data-add-input placeholder=" " required>
                     <label class="add__input__label inp-label" for="url">URL da imagem</label>
+                    <span class="form__error-msg" data-error="add-image"></span>
                 </div>
 
                 <div class="add__input-box">
-                    <input id="categoria" type="text" class="add__input inp" data-input="add-category" placeholder=" " required>
+                    <input id="categoria" type="text" class="add__input inp" data-input="add-category" data-add-input placeholder=" " required>
                     <label class="add__input__label inp-label" for="categoria">Categoria</label>
                     <span class="form__error-msg" data-error="add-category"></span>
                 </div>
 
                 <div class="add__input-box">
-                    <input id="nome-produto" type="text" class="add__input inp" data-input="add-name" maxlength="20" placeholder=" " required>
+                    <input id="nome-produto" type="text" class="add__input inp" data-input="add-name" data-add-input maxlength="20" placeholder=" " required>
                     <label class="add__input__label inp-label" for="nome-produto">Nome do produto</label>
                     <span class="form__error-msg" data-error="add-name"></span>
                 </div>
 
                 <div class="add__input-box">
-                    <input id="preco-produto" type="number" class="add__input inp" data-input="add-price" placeholder=" " required>
+                    <input id="preco-produto" type="number" class="add__input inp" data-input="add-price" data-add-input placeholder=" " required>
                     <label class="add__input__label inp-label" for="preco-produto">Preço do produto</label>
                     <span class="form__error-msg" data-error="add-price"></span>
                 </div>
@@ -67,7 +67,8 @@
                 <textarea class="add__form__textarea textarea" maxlength="150" cols="30" rows="10"
                     placeholder="Descrição do produto"></textarea>
 
-                <input class="btn--add btn--blue btn" type="submit" value="Adicionar">
+                <input class="btn--add btn--blue btn" data-input="add-add" type="submit" value="Adicionar">
+                <span class="form__error-msg" data-error="add-add"></span>
             </form>
 
         </section>
@@ -124,6 +125,5 @@
 
 </body>
 
-<script src="./assets/js/getImagePath.js"></script>
 
 </html>

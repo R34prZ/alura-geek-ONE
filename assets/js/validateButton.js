@@ -18,12 +18,21 @@ export const validateLoginButton = () => {
 
     if (email == "admin@admin.com" && password == "admin") {
         loginErrorSPan.innerText = "";
-        console.log("tchai");
         window.location = "./produtos.html"
     }
-    else { 
-        console.log("num tchai");
+    else {
         loginErrorSPan.innerText = "O email ou senha estão incorretos (tente admin@admin.com e admin)";
     }
 }
 
+export const validateAddProcuctButton = () => {
+    const addErrorSpan = document.querySelector("[data-error='add-add']");
+    const addInputs = Array.from(document.querySelectorAll("[data-add-input]"));
+    const validAddInputs = addInputs.filter(inp => inp.validity.valid);
+
+    if (validAddInputs.length == addInputs.length) { 
+        addErrorSpan.innerText = ""; 
+        window.location = "./produtos.html"
+    }
+    else { addErrorSpan.innerText = "Todos os inputs devem estar válidos antes de adicionar um novo produto!"; }
+}

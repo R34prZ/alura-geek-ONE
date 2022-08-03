@@ -1,6 +1,6 @@
 
 import { validateInput } from "./validateInput.js";
-import { validateContactButton, validateLoginButton } from "./validateButton.js";
+import { validateContactButton, validateLoginButton, validateAddProcuctButton } from "./validateButton.js";
 
 const inputs = document.querySelectorAll("[data-input]");
 
@@ -19,4 +19,15 @@ try {
 }
 catch {
     console.log("Not on login screen.");
+}
+
+// valida o botão de adicionar produto (caso na tela de adicionar produto)
+try {
+    document.querySelector(".btn--add").addEventListener("click", (event) => {
+        event.preventDefault();
+        validateAddProcuctButton();
+    })
+}
+catch {
+    console.log("Not on Add product screen.");
 }
