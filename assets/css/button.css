@@ -5,7 +5,7 @@
     font-weight: 600;
     width: 130px;
     padding: 0.75rem 1rem;
-    transition: transform .35s ease-out;
+    transition: transform .35s ease-out, background .5s ease-in-out;
     text-align: center;
 }
 

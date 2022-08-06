@@ -1,6 +1,6 @@
 
-import { validateInput } from "./validateInput.js";
-import { validateContactButton, validateLoginButton, validateAddProcuctButton } from "./validateButton.js";
+import { validateInput } from "../util/validateInput.js";
+import { validateContactButton, validateLoginButton, validateAddProcuctButton } from "../util/validateButton.js";
 
 const inputs = document.querySelectorAll("[data-input]");
 

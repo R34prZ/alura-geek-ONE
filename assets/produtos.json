@@ -1,0 +1,98 @@
+{
+    "star-wars": [
+        {
+            "image": "assets/images/star-wars/helmet.png",
+            "name": "Capacete Trooper",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/star-wars/helmet-black.png",
+            "name": "Capacete Trooper Preto",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/star-wars/yoda.png",
+            "name": "Boneco Yoda",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/star-wars/trooper.png",
+            "name": "Boneco Trooper",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/star-wars/baby-yoda.png",
+            "name": "Boneco Baby Yoda",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/star-wars/bad-guy.png",
+            "name": "Boneco Star wars",
+            "price": "60,00"
+        }
+    ],
+    "consoles": [
+        {
+            "image": "assets/images/consoles/controler.png",
+            "name": "Controle de Video Game",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/consoles/playstation.png",
+            "name": "Playstation",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/consoles/nintendo2.png",
+            "name": "Nintendo",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/consoles/nintendo1.png",
+            "name": "Nintendo",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/consoles/xbox.png",
+            "name": "Xbox",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/consoles/gameboy.png",
+            "name": "GameBoy",
+            "price": "60,00"
+        }
+    ],
+    "diversos": [
+        {
+            "image": "assets/images/diversos/atari.png",
+            "name": "Camisa Atari",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/diversos/jogando.png",
+            "name": "Quadro Jogando",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/diversos/sonic.png",
+            "name": "Sonic",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/diversos/relogio.png",
+            "name": "Relogio",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/diversos/vr.png",
+            "name": "Óculos VR",
+            "price": "60,00"
+        },
+        {
+            "image": "assets/images/diversos/pikachu.png",
+            "name": "Boneco Pikcahu",
+            "price": "60,00"
+        }
+    ]
+}

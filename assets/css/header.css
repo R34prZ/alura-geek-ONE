@@ -8,6 +8,11 @@
     position: relative;
 }
 
+.login-btn:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
 @media screen and (min-width: 1024px) {
     .header {padding-bottom: 1.375rem;}
 }
