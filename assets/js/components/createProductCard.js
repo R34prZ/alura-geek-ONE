@@ -1,4 +1,4 @@
-import { readProducts, createCategory } from "./crud.js";
+import { readProducts } from "./crud.js";
 
 
 export const createProductCard = ({ image, name, price, id }) => {
@@ -52,16 +52,12 @@ export const displayAllCards = () => {
 
     for (let category in database) {
         database[category].forEach(product => cardsContainer.appendChild(createProductCard(product)));
+        console.log(category);
     }
 }
 
 
 export const displayAllCategories = async () => {
-    
-    // if (!(section in readProducts())) {
-    //     console.log("Category not in database, creating...");
-    //     createCategory(section);
-    // }
 
     const database = readProducts();
 
