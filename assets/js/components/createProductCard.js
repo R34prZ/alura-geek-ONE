@@ -51,8 +51,10 @@ export const displayAllCards = () => {
     const database = readProducts();
 
     for (let category in database) {
-        database[category].forEach(product => cardsContainer.appendChild(createProductCard(product)));
-        console.log(category);
+        if (category != "_firstLog") {
+            database[category].forEach(product => cardsContainer.appendChild(createProductCard(product)));
+            console.log(category);
+        }
     }
 }
 

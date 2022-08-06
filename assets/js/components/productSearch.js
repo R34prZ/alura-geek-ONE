@@ -9,10 +9,12 @@ export const searchProduct = () => {
 
 
     for (let category in database) {
-        for (let product of database[category]) {
-            if (product.name.toUpperCase() == filter) {
-                console.log("Found product.")
-                return createProductCard(product);
+        if (category != "_firstLog") {
+            for (let product of database[category]) {
+                if (product.name.toUpperCase() == filter) {
+                    console.log("Found product.")
+                    return createProductCard(product);
+                }
             }
         }
     }
