@@ -1,9 +1,11 @@
 import "./components/validation.js";
 import "./components/mobileSearch.js";
-import { crud } from "./components/crud.js";
+import { crud, readProducts, setProduct } from "./components/crud.js";
 import { displayAllCategories, displayAllCards } from "./components/createProductCard.js";
 import { displaySearch } from "./components/productSearch.js";
 
+
+// TODO Mostrar categorias existentes ao criar novo card, criar nova categoria caso não exista
 
 const loadJSONtoDatabase = async () => {
     // carrega os dados de um arquivo json para o local storage
@@ -14,17 +16,25 @@ const loadJSONtoDatabase = async () => {
     const json = await response;
 
     for (let category in json) {
-        json[category].forEach(product => crud.setID(product));
+        if (category != "_firstLog")
+            json[category].forEach(product => crud.setID(product));
     }
 
-    crud.setProduct(await json);
+    const checkLog = (readProducts()._firstLog === true) || !("_firstLog" in readProducts());
+    
+    if (json._firstLog === "true" && checkLog) {
+        console.log("First time logging");
+        json._firstLog = false;
+        crud.setProduct(json);
+        console.log("Loaded JSON data to database");
+    }
 }
 
-loadJSONtoDatabase();
+await loadJSONtoDatabase();
 
-const cardsSections = document.querySelectorAll("[data-category]");
+if (window.location.pathname == "/index.html")
+    await displayAllCategories();
 
-cardsSections.forEach(section => displayAllCategories(section.dataset.category));
 
 try {
     displayAllCards();

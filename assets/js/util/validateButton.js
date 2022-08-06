@@ -1,3 +1,5 @@
+import { addProductCard } from "./addProductCard.js";
+
 export const validateContactButton = (input) => {
 
     const sendButton = document.querySelector(".btn--post");
@@ -32,6 +34,8 @@ export const validateAddProcuctButton = () => {
 
     if (validAddInputs.length == addInputs.length) { 
         addErrorSpan.innerText = ""; 
+        console.log("New product added successfully");
+        addProductCard();
         window.location = "./produtos.html"
     }
     else { addErrorSpan.innerText = "Todos os inputs devem estar válidos antes de adicionar um novo produto!"; }

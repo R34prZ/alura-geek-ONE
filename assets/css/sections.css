@@ -1,7 +1,9 @@
-.star-wars-sect, .consoles-sect, .diversos-sect, .produtos-sect, .sobre-sect {
+.sect {
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.diversos-sect, .produtos-sect, .sobre-sect {
+.sect:last-child {
     padding-bottom: 4rem;
 }
+

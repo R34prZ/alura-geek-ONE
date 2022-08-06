@@ -4,6 +4,14 @@
 
 export const setProduct = (database) => localStorage.setItem("produtos", JSON.stringify(database));
 
+
+export const createCategory = (category) => {
+    const database = readProducts();
+    database[category] = [];
+    setProduct(database);
+}
+
+
 export const setID = (product) => {
     // gera um id pseudo aleatório
     
@@ -53,4 +61,4 @@ export const deleteProduct = (id, category) => {
     setProduct(database);
 }
 
-export const crud = { setID, setProduct, createProduct, readProducts, updateProduct, deleteProduct };
+export const crud = { setID, setProduct, createCategory,createProduct, readProducts, updateProduct, deleteProduct };

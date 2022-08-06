@@ -1,7 +1,7 @@
-import { readProducts } from "./crud.js";
+import { readProducts, createCategory } from "./crud.js";
 
 
-export const createProductCard = ({ image, name, price }) => {
+export const createProductCard = ({ image, name, price, id }) => {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
 
@@ -14,11 +14,36 @@ export const createProductCard = ({ image, name, price }) => {
         </div>
     `
 
+    cardDiv.dataset.id = id;
     cardDiv.innerHTML = cardTemplate;
 
     return cardDiv;
 }
 
+
+export const displaySectionHTML = (category) => {
+    // cria uma seção no HTML
+    
+    const categorySect = document.createElement("section");
+    categorySect.classList.add(`${category}-sect`, "sect", "container");
+    categorySect.dataset.category = category;
+
+    const sectTitle = category.trim().toLowerCase().replaceAll(/[-_/]/g, " ").replace(/[a-zç]/, w => w.toUpperCase());
+    console.log(sectTitle);
+
+    const sectTemplate = `
+        <div class="sect__header">
+            <h2 class="sect__title">${sectTitle}</h2>
+            <a href="./produtos.html" class="sect__link">Ver tudo</a>
+        </div>
+
+        <div class="cards-box"></div>
+    `
+
+    categorySect.innerHTML = sectTemplate;
+
+    document.querySelector("main").insertAdjacentElement("beforeend", categorySect);
+}
 
 
 export const displayAllCards = () => {
@@ -31,20 +56,29 @@ export const displayAllCards = () => {
 }
 
 
-export const displayAllCategories = async (section) => {
-    const cardsContainer = document.querySelector(`[data-category="${section}"] > .cards-box`);
+export const displayAllCategories = async () => {
+    
+    // if (!(section in readProducts())) {
+    //     console.log("Category not in database, creating...");
+    //     createCategory(section);
+    // }
+
     const database = readProducts();
 
-    resetCardContainer(section);
-
-    database[section].forEach(data => cardsContainer.appendChild(createProductCard(data)));
+    for (let category in database) {
+        if (category != "_firstLog") {
+            displaySectionHTML(category);   
+            const cardsContainer = document.querySelector(`[data-category="${category}"] > .cards-box`);
+            database[category].forEach(data => cardsContainer.appendChild(createProductCard(data)));
+        }
+    }
 }
 
 
 
-const resetCardContainer = (section) => {
-    const cards = document.querySelectorAll(`[data-category="${section}"] > .cards-box > .card`);
+// const resetCardContainer = (section) => {
+//     const cards = document.querySelectorAll(`[data-category="${section}"] > .cards-box > .card`);
 
-    cards.forEach(card => card.remove());
-}
+//     cards.forEach(card => card.remove());
+// }
 

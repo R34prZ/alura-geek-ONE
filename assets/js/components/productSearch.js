@@ -18,7 +18,7 @@ export const searchProduct = () => {
     }
 
     const errorSPan = document.createElement("span");
-    errorSPan.classList.add("header__search-result--error");
+    errorSPan.classList.add("header__search-result__error");
     errorSPan.innerText = "Nenhum produto encontrado!"
 
     return errorSPan;
