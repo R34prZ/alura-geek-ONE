@@ -1,11 +1,37 @@
 import "./components/validation.js";
 import "./components/mobileSearch.js";
-import { crud, readProducts, setProduct } from "./components/crud.js";
+import { crud, readProducts } from "./components/crud.js";
 import { displayAllCategories, displayAllCards } from "./components/createProductCard.js";
 import { displaySearch } from "./components/productSearch.js";
-
+import { handleBtns, handleSectionDelete } from "./components/handleCardActions.js";
+import { unhideCards, unhideSections } from "./util/unhide.js";
+import { handleAdminPanel } from "./components/handleAdminPanel.js";
 
 // TODO Mostrar categorias existentes ao criar novo card, criar nova categoria caso não exista
+
+const grantAdminPrivileges = () => {
+    try {
+        const adminData = JSON.parse(sessionStorage.getItem("admin"));
+        
+        if (adminData.logged) {
+
+            if (window.location.pathname == "/index.html")
+                document.querySelector(".login-btn").classList.add("hidden");
+            else if (window.location.pathname == "/produtos.html") {
+                document.querySelector(".btn--adc-produto").classList.remove("hidden"); 
+                document.querySelector(".header__admin-panel-btn").classList.remove("hidden");
+            }
+
+            unhideCards();
+            unhideSections();
+            document.querySelector(".header__user").classList.remove("hidden");
+
+        }
+    }
+    catch {
+        return;
+    }
+}
 
 const loadJSONtoDatabase = async () => {
     // carrega os dados de um arquivo json para o local storage
@@ -32,16 +58,20 @@ const loadJSONtoDatabase = async () => {
 
 await loadJSONtoDatabase();
 
+
 if (window.location.pathname == "/index.html")
     await displayAllCategories();
 
-
-try {
+if (window.location.pathname == "/produtos.html") {
+    handleAdminPanel();
     displayAllCards();
 }
-catch {
-    console.log("Not on products screen.")
-}
+
 
 
 document.querySelector(".header__search__button").addEventListener("click", displaySearch);
+
+handleBtns();
+handleSectionDelete();
+
+grantAdminPrivileges();

@@ -1,4 +1,5 @@
 import { addProductCard } from "./addProductCard.js";
+import { logAdmin } from "./logAdmin.js";
 
 export const validateContactButton = (input) => {
 
@@ -20,6 +21,7 @@ export const validateLoginButton = () => {
 
     if (email == "admin@admin.com" && password == "admin") {
         loginErrorSPan.innerText = "";
+        logAdmin();
         window.location = "./produtos.html"
     }
     else {

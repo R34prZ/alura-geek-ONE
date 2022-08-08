@@ -27,11 +27,12 @@
 .inp-label {
     position: absolute;
     left: 1rem;
-    top: 50%;
+    top: 28px;
     transform: translateY(-50%);
     color: #a2a2a2;
     font-weight: 400;
     font-size: var(--subtitle-size);
+    transition: top .2s;
 }
 
 

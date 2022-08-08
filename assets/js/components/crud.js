@@ -4,11 +4,20 @@
 
 export const setProduct = (database) => localStorage.setItem("produtos", JSON.stringify(database));
 
+export const deleteCategory = (category) => {
+    const database = readProducts();
+    delete database[category];
+    setProduct(database);
+}
 
 export const createCategory = (category) => {
     const database = readProducts();
     database[category] = [];
     setProduct(database);
+}
+
+export const deleteAllDatabase = () => {
+    localStorage.clear();
 }
 
 
@@ -56,8 +65,9 @@ export const updateProduct = (id, category, newData) => {
 
 export const deleteProduct = (id, category) => {
     const database = readProducts();
-    database[category].splice(id, 1);
-
+    
+    database[category] = database[category].filter(product => (product.id != id));
+    
     setProduct(database);
 }
 

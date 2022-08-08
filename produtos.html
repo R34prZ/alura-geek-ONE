@@ -37,15 +37,35 @@
 
         <div class="header__search-result"></div>
 
+        <button class="header__admin-panel-btn btn--blue btn hidden">Painel do Administrador</button>
+
     </header>
 
     <main>
+
+        <div class="adm-panel-modal">
+
+            <div class="adm-panel__container">
+
+                <div class="adm-panel__header">
+                    <h2 class="adm-panel__title">Opções do Administrador</h2>
+                    <button class="adm-panel__close-btn"></button>
+                </div>
+
+                <div class="adm-panel__body">
+                    <button class="adm-panel__close-session-btn btn">Fechar Sessão</button>
+                    <button class="adm-panel__delete-all-btn btn">Apagar dados</button>
+                </div>
+
+            </div>
+
+        </div>
 
         <section class="produtos-sect sect container">
 
             <div class="produtos-sect__header">
                 <h2 class="sect__title">Todos os produtos</h2>
-                <a href="./add_produto.html" class="btn--adc-produto btn--blue btn">Adicionar produto</a>
+                <a href="./add_produto.html" class="btn--adc-produto btn--blue btn hidden">Adicionar produto</a>
             </div>
 
             <div class="cards-box"></div>

@@ -15,7 +15,8 @@ const errorMessages = {
         typeMismatch: "Informe uma URL válida!"
     },
     "add-category": {
-        valueMissing: "A categoria do produto não deve ficar vazia!"
+        valueMissing: "A categoria do produto não deve ficar vazia!",
+        patternMismatch: "Utilize o padrão nomecategoria ou nome-categoria!"
     },
     "add-name": {
         valueMissing: "O nome do produto não deve ficar vazio!"

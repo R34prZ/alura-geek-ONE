@@ -13,6 +13,17 @@
     color: var(--bg-color);
 }
 
+.header__user {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--txt-color);
+}
+
+.header__admin-panel-btn {
+    width: fit-content;
+}
+
 @media screen and (min-width: 1024px) {
     .header {padding-bottom: 1.375rem;}
 }
