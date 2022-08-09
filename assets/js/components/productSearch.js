@@ -7,17 +7,20 @@ export const searchProduct = () => {
     const searchInput = document.querySelector(".header__search__input");
     const filter = searchInput.value.toUpperCase();
 
+    let foundProducts = [];
+
 
     for (let category in database) {
         if (category != "_firstLog") {
-            for (let product of database[category]) {
-                if (product.name.toUpperCase() == filter) {
-                    console.log("Found product.")
-                    return createProductCard(product);
+            database[category].forEach(product => {
+                if (product.name.toUpperCase().includes(filter) && filter.length > 0) {
+                    foundProducts.push(createProductCard(product));
                 }
-            }
+            })
         }
     }
+
+    if (foundProducts.length > 0) return foundProducts;
 
     const errorSPan = document.createElement("span");
     errorSPan.classList.add("header__search-result__error");
@@ -27,12 +30,20 @@ export const searchProduct = () => {
 }
 
 
-export const displaySearch = () => {
+export const displaySearch = (max) => {
     const searchResultDiv = document.querySelector(".header__search-result");
     searchResultDiv.classList.add("header__search-result--active")
     const searchResponse = searchProduct();
-
     searchResultDiv.innerHTML = "";
 
-    searchResultDiv.appendChild(searchResponse);
+    // apresenta os max primeiros items que satisfazem a pesquisa
+    try {
+        searchResponse.forEach((product, index) => {
+            if (index < max)
+                searchResultDiv.appendChild(product);
+        });
+    }
+    catch {
+        searchResultDiv.appendChild(searchResponse);
+    }
 }

@@ -49,12 +49,14 @@
     border-radius: 0 0 8px 8px;
     background: #f0ecec;
     display: flex; 
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     padding: .5rem 2rem;
     box-shadow: #00000020 0 1rem 1rem .25rem;
     transition: visibility 1s, opacity .5s linear;
     opacity: 0;
+    column-gap: 1rem;
+    overflow-x: scroll;
 }
 
 .header__search-result--active {
@@ -67,10 +69,12 @@
     font-weight: 600;
     font-size: var(--title-size);
     color: rgb(231, 71, 71);
+    margin: 0 auto;
 }
 
 .header__search-result.header__search-result--active .card {
     display: inline-block;
+    min-width: 200px;
     width: 200px;
     height: 95%;   
 }

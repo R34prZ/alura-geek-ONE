@@ -1,5 +1,6 @@
 import { deleteAllDatabase } from "./crud.js";
-import { closeAdminSession } from "../util/logAdmin.js"
+import { closeAdminSession } from "../util/logAdmin.js";
+import { updateAllCards } from "../components/createProductCard.js"
 
 
 export const handleAdminPanel = () => {
@@ -11,15 +12,20 @@ export const handleAdminPanel = () => {
 
     closeBtn.addEventListener("click", () => closeModal(modal));
     openModalBtn.addEventListener("click", () => openModal(modal));
-    deleteAllDataBtn.addEventListener("click", () => deleteAllDatabase());
+    deleteAllDataBtn.addEventListener("click", deleteAllCards);
     closeSessionBtn.addEventListener("click", closeAdminSession);
 }
 
-const closeModal = (modal) => {
-    modal.classList.remove("adm-panel-modal--active");
+export const closeModal = (modal) => {
+    modal.classList.remove("modal--active");
 }
 
-const openModal = (modal) => {
-    modal.classList.add("adm-panel-modal--active");
+export const openModal = (modal) => {
+    modal.classList.add("modal--active");
+}
+
+const deleteAllCards = () => {
+    deleteAllDatabase();
+    updateAllCards();
 }
 

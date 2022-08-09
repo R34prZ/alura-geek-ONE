@@ -69,7 +69,7 @@ if (window.location.pathname == "/produtos.html") {
 
 
 
-document.querySelector(".header__search__button").addEventListener("click", displaySearch);
+document.querySelector(".header__search__button").addEventListener("click", () => displaySearch(6));
 
 handleBtns();
 handleSectionDelete();

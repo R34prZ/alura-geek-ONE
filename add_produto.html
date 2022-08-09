@@ -63,7 +63,8 @@
                 </div>
 
                 <div class="add__input-box">
-                    <input id="preco-produto" type="number" class="add__input inp" data-input="add-price" data-add-input placeholder=" " required>
+                    <!-- O preço deveria ser um input type number, mas para facilitar validação usarei text -->
+                    <input id="preco-produto" type="text" class="add__input inp" data-input="add-price" data-add-input placeholder=" " required>
                     <label class="add__input__label inp-label" for="preco-produto">Preço do produto</label>
                     <span class="form__error-msg" data-error="add-price"></span>
                 </div>
