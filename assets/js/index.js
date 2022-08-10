@@ -14,9 +14,9 @@ const grantAdminPrivileges = () => {
         
         if (adminData.logged) {
 
-            if (window.location.pathname.indexOf("/index.html"))
+            if (window.location.pathname.includes("/index.html"))
                 document.querySelector(".login-btn").classList.add("hidden");
-            else if (window.location.pathname.includes("/produtos.html")) {
+            else if (window.location.pathname.includes("/produtos.html"))  {
                 document.querySelector(".btn--adc-produto").classList.remove("hidden"); 
                 document.querySelector(".header__admin-panel-btn").classList.remove("hidden");
             }
@@ -57,6 +57,7 @@ const loadJSONtoDatabase = async () => {
 
 await loadJSONtoDatabase();
 
+// resolver o problema de mostrar somente em index.html, já que index não é a primeira página carregada
 if (window.location.pathname.includes("/index.html")) {
     await displayAllCategories();
 }
