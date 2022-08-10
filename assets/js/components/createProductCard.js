@@ -10,7 +10,7 @@ export const createProductCard = ({ image, name, price, id }, category) => {
         <div class="card__info">
             <p class="card__title">${name}</p>
             <h3 class="card__price">R$ ${price}</h3>
-            <a href="./sobre-produto.html" class="card__show-link">Ver produto</a>
+            <a class="card__show-link">Ver produto</a>
         </div>
         <button class="card__delete hidden"></button>
         <button class="card__edit hidden"></button>

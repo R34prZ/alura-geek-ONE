@@ -83,7 +83,11 @@
     cursor: pointer;
 }
 
-.card:last-child, .card:nth-last-child(2) {
+/* .card--overflow:last-child, .card--overflow:nth-last-child(2) {
+    display: none;
+} */
+
+.card--overflow {
     display: none;
 }
 
@@ -109,7 +113,7 @@
         width: calc(16.66% - 1rem);
     }
 
-    .card:last-child, .card:nth-last-child(2) {
+    /* .card:last-child, .card:nth-last-child(2) {
        display: inline;
-    }
+    } */
 }

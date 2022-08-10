@@ -6,8 +6,7 @@ import { displaySearch } from "./components/productSearch.js";
 import { handleBtns, handleSectionDelete } from "./components/handleCardActions.js";
 import { unhideCards, unhideSections } from "./util/unhide.js";
 import { handleAdminPanel } from "./components/handleAdminPanel.js";
-
-// TODO Mostrar categorias existentes ao criar novo card, criar nova categoria caso não exista
+import { handleProductDescription } from "./components/productDescription.js";
 
 const grantAdminPrivileges = () => {
     try {
@@ -58,20 +57,19 @@ const loadJSONtoDatabase = async () => {
 
 await loadJSONtoDatabase();
 
-
-if (window.location.pathname == "/index.html")
+if (window.location.pathname.includes("/index.html")) {
     await displayAllCategories();
+}
 
-if (window.location.pathname == "/produtos.html") {
+if (window.location.pathname.includes("/produtos.html")) {
     handleAdminPanel();
     displayAllCards();
 }
-
-
 
 document.querySelector(".header__search__button").addEventListener("click", () => displaySearch(6));
 
 handleBtns();
 handleSectionDelete();
+handleProductDescription();
 
 grantAdminPrivileges();
