@@ -14,9 +14,9 @@ const grantAdminPrivileges = () => {
         
         if (adminData.logged) {
 
-            if (window.location.pathname == "/index.html")
+            if (window.location.pathname.indexOf("/index.html"))
                 document.querySelector(".login-btn").classList.add("hidden");
-            else if (window.location.pathname == "/produtos.html") {
+            else if (window.location.pathname.includes("/produtos.html")) {
                 document.querySelector(".btn--adc-produto").classList.remove("hidden"); 
                 document.querySelector(".header__admin-panel-btn").classList.remove("hidden");
             }
