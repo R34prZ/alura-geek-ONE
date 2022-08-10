@@ -6,7 +6,7 @@ const errorMessages = {
     "login-email": {
         valueMissing: "O email não deve ficar vazio!",
         patternMismatch: "Insira um email válido!",
-        typeMismatch: "Você deve informar um e-mail!"
+        // typeMismatch: "Você deve informar um e-mail!"
     },
     "login-password": {
         valueMissing: "A senha não deve ficar vazia!"
@@ -58,10 +58,11 @@ const showErrorMessage = (input, inpType) => {
 
     errors.forEach(error => {
         if (input.validity[error]) {
-            errorMessage = errorMessages[inpType][error];
-        } //else {
-        //     errorMessage = errorMessages.fallback.custom;
-        // }
+            if (typeof errorMessages[inpType][error] !== 'undefined')
+                errorMessage = errorMessages[inpType][error];
+            else 
+                errorMessage = errorMessages.fallback.custom;
+        } 
     });
 
     return errorMessage;
