@@ -6,7 +6,7 @@ const errorMessages = {
     "login-email": {
         valueMissing: "O email não deve ficar vazio!",
         patternMismatch: "Insira um email válido!",
-        // typeMismatch: "Você deve informar um e-mail!"
+        typeMismatch: "Você deve informar um e-mail!"
     },
     "login-password": {
         valueMissing: "A senha não deve ficar vazia!"
