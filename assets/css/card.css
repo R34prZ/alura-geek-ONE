@@ -79,7 +79,7 @@
     background: #00000030 url("../images/edit.svg") center no-repeat;
 }
 
-.card__delete:hover, .card__edit:hover {
+.card__delete:hover, .card__edit:hover, .card__show-link:hover {
     cursor: pointer;
 }
 
