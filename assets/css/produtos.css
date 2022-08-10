@@ -36,9 +36,4 @@
     .produtos-sect__header {
         flex-direction: column;
     }
-    
-    .modal__container {
-        width: 90%;
-        height: 300px;
-    }
 }

@@ -57,7 +57,6 @@ const loadJSONtoDatabase = async () => {
 
 await loadJSONtoDatabase();
 
-// resolver o problema de mostrar somente em index.html, já que index não é a primeira página carregada
 if (window.location.pathname.includes("/index.html")) {
     await displayAllCategories();
 }
