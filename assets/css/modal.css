@@ -79,7 +79,7 @@
     text-align: center;
 }
 
-.edit-panel__inp {
+.edit-panel__inp, .edit-modal__textarea  {
     box-shadow: #00000030 0 0 .5rem .15rem;
     margin: .5rem 0;
 }

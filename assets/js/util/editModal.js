@@ -14,8 +14,9 @@ export const editModal = (cardTitle) => {
             <div class="edit-panel__body modal__body">
                 <form class="edit-panel__form">
                     <input class="edit-panel__inp inp" type="text" placeholder="Imagem do produto" data-input="edit-image">
-                    <input class="edit-panel__inp inp" type="text" placeholder="Nome do produto" data-input="edit-name">
+                    <input class="edit-panel__inp inp" type="text" maxlength="20" placeholder="Nome do produto" data-input="edit-name">
                     <input class="edit-panel__inp inp" type="text" placeholder="Preço do produto" data-input="edit-price">
+                    <textarea class="edit-modal__textarea textarea" maxlength="150" placeholder="Descrição do produto"></textarea>
                     <button type="submit" class="edit-panel__save-btn btn">Salvar</button>
                 </form>
             </div>

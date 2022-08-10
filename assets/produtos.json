@@ -3,7 +3,8 @@
         {
             "image": "assets/images/star-wars/helmet.png",
             "name": "Capacete Trooper",
-            "price": "60,00"
+            "price": "60,00",
+            "description": "Capacete dos soldados troopers da saga de filmes Star Wars."
         },
         {
             "image": "assets/images/star-wars/helmet-black.png",
@@ -13,12 +14,14 @@
         {
             "image": "assets/images/star-wars/yoda.png",
             "name": "Boneco Yoda",
-            "price": "60,00"
+            "price": "60,00",
+            "description": "Boneco de plástico de alta qualidade do Yoda."
         },
         {
             "image": "assets/images/star-wars/trooper.png",
             "name": "Boneco Trooper",
-            "price": "60,00"
+            "price": "60,00",
+            "description": "Boneco de plástico de um soldado trooper da saga de filmes Star Wars."
         },
         {
             "image": "assets/images/star-wars/baby-yoda.png",

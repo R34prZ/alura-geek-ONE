@@ -46,7 +46,7 @@ const generateDescription = (product) => {
 
                         <h2 class="product-info__title">${product.name}</h2>
                         <h4 class="product-info__price"><strong>R$ ${product.price}</strong></h4>
-                        <p class="product-info__description">Descrição do produto.</p>
+                        <p class="product-info__description">${product.description || "Nenhuma descrição encontrada."}</p>
 
                     </div>
 

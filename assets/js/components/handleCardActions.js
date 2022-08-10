@@ -54,19 +54,31 @@ const editCard = (event) => {
     const saveBtn = editPanel.querySelector(".edit-panel__save-btn");
     saveBtn.addEventListener("click", (event) => {
         event.preventDefault();
+
         const product = readProducts()[cardCategory].find(product => product.id == cardID);
+
         const editImage = editPanel.querySelector("[data-input='edit-image']");
         const editName = editPanel.querySelector("[data-input='edit-name']");
         const editPrice = editPanel.querySelector("[data-input='edit-price']");
-        const updatedProduct = { image: editImage.value || product.image, name: editName.value || product.name, price: editPrice.value || product.price };
+        const editDescription = editPanel.querySelector(".edit-modal__textarea");
+
+        const updatedProduct = { 
+            image: editImage.value || product.image, 
+            name: editName.value || product.name, 
+            price: editPrice.value || product.price,
+            description: editDescription.value || product.description
+         };
+
         updateProduct(cardID, cardCategory, updatedProduct);
         closeModal(editPanel);
+
         try {
             updateAllCards();
         }
         catch {
             updateSection(cardCategory);
         }
+
         unhideCards();
         unhideSections();
     })
