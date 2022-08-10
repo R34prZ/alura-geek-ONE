@@ -4,5 +4,7 @@ export const logAdmin = () => {
 
 export const closeAdminSession = () => {
     sessionStorage.setItem("admin", JSON.stringify({ logged: false }));
-    window.location = "/index.html";
+    const url = window.location.origin + window.location.pathname;
+    const indexLocation = url.slice(0, url.lastIndexOf("/")) + "/index.html";
+    window.location = indexLocation;
 }
